@@ -2,7 +2,7 @@
 
 Ce repo contient la stack Docker pour avoir une stack ELK (Elasticseach, Logstash, Kibana).
 
-C'est un fork de [deviantony/docker-elk](docker-elk). La branche `master` est toujours
+C'est un fork de [deviantony/docker-elk][docker-elk]. La branche `master` est toujours
 présente sur le repo afin de conserver les données originale si quelque chose vient à planter. Cela permettra aussi
 de faire plus facilement une mise à jour si besoin.
 
@@ -28,10 +28,10 @@ Docker.
 ## Reverse proxy
 
 Dans le fichier [docker-compose.yml](./docker-compose.yml) il y a plusieurs variable d'environnement concernant des
-domaines et des adresses emails pour Let's Encrypt. Cela permet au [reverse proxy](reverse-proxy) de fonctionner
+domaines et des adresses emails pour Let's Encrypt. Cela permet au [reverse proxy][reverse-proxy] de fonctionner
 correctement.
 
-Nous recommandons l'urilisation du reverse proxy développé par [evertramos](reverse-proxy) qui permet d'avoir une
+Nous recommandons l'urilisation du reverse proxy développé par [evertramos][reverse-proxy] qui permet d'avoir une
 surcouche SSL avec des certificats générés et renouvelés automatiquement. L'utilisation est très simple et rapide.
 
 Il faut cependant bien penser à mettre le même network entre le reverse proxy et la stack ELK. Pour info le network 
