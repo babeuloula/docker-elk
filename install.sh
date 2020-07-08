@@ -19,4 +19,4 @@ make build
 make start
 echo -e "${GREEN}Docker is started with success!${RESET}" > /dev/tty
 
-block_success "Kibana is started http://127.0.0.1:${KIBANA_PORT}"
+block_success "Kibana is started https://${KIBANA_DOMAIN}:${KIBANA_PORT}"
