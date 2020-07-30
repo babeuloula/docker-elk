@@ -49,9 +49,6 @@ services:
       - .env
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
-      VIRTUAL_HOST: ${LOGSTASH_DOMAIN}
-      LETSENCRYPT_HOST: ${LOGSTASH_DOMAIN}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
     networks:
       - elk
     depends_on:
@@ -71,10 +68,6 @@ services:
       - "${KIBANA_PORT-5601}:5601"
     env_file:
       - .env
-    environment:
-      VIRTUAL_HOST: ${KIBANA_DOMAIN}
-      LETSENCRYPT_HOST: ${KIBANA_DOMAIN}
-      LETSENCRYPT_EMAIL: ${LETSENCRYPT_EMAIL}
     networks:
       - elk
     depends_on:
